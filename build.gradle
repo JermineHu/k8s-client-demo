@@ -1,0 +1,22 @@
+group 'com.xinktech.k8s'
+version '1.0-SNAPSHOT'
+
+apply plugin: 'java'
+apply plugin: 'application'
+mainClassName = 'com.xinktech.k8s.Main'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+jar {
+    baseName = 'k8s-client-by-gradle'
+    version =  '0.1.0'
+}
+
+dependencies {
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+    compile 'io.fabric8:kubernetes-client:3.1.8'
+}
